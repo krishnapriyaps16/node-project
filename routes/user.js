@@ -1267,6 +1267,7 @@ function sentemail() {
                     pass: '@guru.1234'
                 }
             });
+            
 
             var mailOptions = {
                 from: 'sgs.gurukulam@gmail.com',
