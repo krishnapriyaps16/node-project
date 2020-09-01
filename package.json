@@ -1,0 +1,31 @@
+{
+    "name": "sevasramapis",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://gitlab.saasvaap.com/DarsakKumarGK/SevasramApis.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "connect-multiparty": "^2.2.0",
+        "cors": "^2.8.5",
+        "cryptr": "^6.0.1",
+        "express": "^4.17.1",
+        "firebase-admin": "^8.10.0",
+        "jsonwebtoken": "^8.5.1",
+        "multer": "^1.4.2",
+        "mysql": "^2.18.1",
+        "nodemailer": "^6.4.3",
+        "pdf-creator-node": "^1.4.0",
+        "random-string-generator": "^1.0.0",
+        "randomstring": "^1.1.5"
+    }
+}

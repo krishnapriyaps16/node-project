@@ -1,0 +1,35 @@
+var express = require('express')
+
+const jwt = require('jsonwebtoken');
+var mysql = require('mysql');
+//var session = require('express-session');
+var bodyParser = require('body-parser');
+var connection = require('./config');
+
+
+
+var app = express();
+app.get('/', (request, response) => {
+  response.send('Server Okay')
+})
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+const loginRoutes = require('./routes/user');
+const packageRoutes = require('./routes/package');
+const masterRoutes = require('./routes/masters');
+const subsearchRoutes = require('./routes/subscriber');
+const dashboardRoutes = require('./routes/dashboard');
+const agentprofileRoutes = require('./routes/agentprofile');
+const notificationRoutes = require('./routes/notification');
+const agentprofileeditRoutes = require('./routes/agentprofileedit');
+app.use("/user", loginRoutes);
+app.use("/packages", packageRoutes);
+app.use("/masters", masterRoutes);
+app.use("/subscribers", subsearchRoutes);
+app.use("/dashboard", dashboardRoutes);
+app.use("/profile", agentprofileRoutes);
+app.use("/agent", agentprofileeditRoutes);
+app.use("/notification", notificationRoutes);
+app.listen(5555);
+console.log('Server Listening on 5555')
