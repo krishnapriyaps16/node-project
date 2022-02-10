@@ -5,11 +5,11 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'root123',
-    database: 'sevasram_dev',
+    database: 'categories',
     multipleStatements: true
 });
 connection.connect(function(err) {
-    console.log(err)
+   
     if (!err) {
         console.log("Database is connected");
     } else {
